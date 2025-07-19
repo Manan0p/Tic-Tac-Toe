@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <!-- Tailwind CSS for utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex items-center justify-center min-h-screen p-4">
+
+    <main class="bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-2xl shadow-2xl w-full max-w-md text-center">
+        
+        <h1 class="text-4xl sm:text-5xl font-bold text-gray-800 dark:text-white mb-6">Tic-Tac-Toe</h1>
+
+        <!-- Game Setup Section -->
+        <div class="game-setup">
+            <h2 class="text-2xl font-semibold mb-4">Choose Your Opponent</h2>
+            <div class="flex flex-col sm:flex-row gap-4 mb-4">
+                <button id="vs-human" class="mode-button w-full py-3 px-4 bg-sky-500 hover:bg-sky-600 text-white font-bold rounded-lg text-lg shadow-md transition-all">
+                    Vs. Human
+                </button>
+                <button id="vs-bot" class="mode-button w-full py-3 px-4 bg-teal-500 hover:bg-teal-600 text-white font-bold rounded-lg text-lg shadow-md transition-all">
+                    Vs. Bot
+                </button>
+            </div>
+            <div id="difficulty-selection" class="hidden">
+                <h3 class="text-xl font-semibold mb-3">Select Difficulty</h3>
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <button data-difficulty="easy" class="difficulty-button w-full py-2 px-4 bg-green-500 hover:bg-green-600 text-white font-bold rounded-lg shadow-sm transition-all">Easy</button>
+                    <button data-difficulty="medium" class="difficulty-button w-full py-2 px-4 bg-yellow-500 hover:bg-yellow-600 text-white font-bold rounded-lg shadow-sm transition-all">Medium</button>
+                    <button data-difficulty="impossible" class="difficulty-button w-full py-2 px-4 bg-red-500 hover:bg-red-600 text-white font-bold rounded-lg shadow-sm transition-all">Impossible</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Active Section (Initially Hidden) -->
+        <div class="game-active-section hidden">
+            <p class="status-display h-10 text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-6 flex items-center justify-center"></p>
+            
+            <div class="game-board grid grid-cols-3 gap-3 sm:gap-4 mb-6">
+                <!-- Cells are created with data-cell-index attributes for JS targeting -->
+                <div class="cell aspect-square bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center text-5xl sm:text-6xl font-bold cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-600" data-cell-index="0"></div>
+                <div class="cell aspect-square bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center text-5xl sm:text-6xl font-bold cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-600" data-cell-index="1"></div>
+                <div class="cell aspect-square bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center text-5xl sm:text-6xl font-bold cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-600" data-cell-index="2"></div>
+                <div class="cell aspect-square bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center text-5xl sm:text-6xl font-bold cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-600" data-cell-index="3"></div>
+                <div class="cell aspect-square bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center text-5xl sm:text-6xl font-bold cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-600" data-cell-index="4"></div>
+                <div class="cell aspect-square bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center text-5xl sm:text-6xl font-bold cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-600" data-cell-index="5"></div>
+                <div class="cell aspect-square bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center text-5xl sm:text-6xl font-bold cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-600" data-cell-index="6"></div>
+                <div class="cell aspect-square bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center text-5xl sm:text-6xl font-bold cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-600" data-cell-index="7"></div>
+                <div class="cell aspect-square bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center text-5xl sm:text-6xl font-bold cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-600" data-cell-index="8"></div>
+            </div>
+            
+            <button class="restart-button w-full py-3 px-4 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-lg text-lg shadow-md hover:shadow-lg transition-all">
+                New Game
+            </button>
+        </div>
+    </main>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

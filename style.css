@@ -1,0 +1,34 @@
+/* Sets the font for the entire page */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Styling for Player X's marker */
+.player-x { 
+    color: #3b82f6; /* blue-500 */
+    font-weight: 700; 
+    font-size: 4rem; 
+}
+
+/* Styling for Player O's marker */
+.player-o { 
+    color: #ef4444; /* red-500 */
+    font-weight: 700; 
+    font-size: 4rem; 
+}
+
+/* Adds a smooth background color transition on hover for cells */
+.cell { 
+    transition: background-color 0.2s ease-in-out; 
+}
+
+/* Style for the winning combination of cells */
+.winning-cell { 
+    background-color: #a7f3d0; /* emerald-200 */
+}
+
+/* Disables pointer events and reduces opacity for the board (used when bot is thinking) */
+.board-disabled { 
+    pointer-events: none; 
+    opacity: 0.6; 
+}
